@@ -177,7 +177,7 @@ class Space2Ctrl {
           if (!key_combo && !modifier_down) {
             // cout << "    (!key_combo && !modifier_down)";
             gettimeofday(&endWait, NULL);
-            if ( diff_ms(endWait, startWait) < 600 ) {
+            if ( diff_ms(endWait, startWait) < 1200 ) {
               // if minimum timeout elapsed since space was pressed
               XTestFakeKeyEvent(userData->ctrlDisplay, 255, True, CurrentTime);
               XTestFakeKeyEvent(userData->ctrlDisplay, 255, False, CurrentTime);
