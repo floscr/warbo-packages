@@ -250,11 +250,11 @@ public:
     // XChangeKeyboardMapping(userData.ctrlDisplay, 255, 1, &spc, 1);
     // XFlush(userData.ctrlDisplay);
 
-    // TODO: document why the following event is needed
+    /*
     XTestFakeKeyEvent(userData.ctrlDisplay, 255, True, CurrentTime);
     XTestFakeKeyEvent(userData.ctrlDisplay, 255, False, CurrentTime);
 
-    if (!XRecordEnableContext(userData.dataDisplay, recContext, eventCallback,
+    */if (!XRecordEnableContext(userData.dataDisplay, recContext, eventCallback,
                               (XPointer) &userData)) {
       throw exception();
     }
